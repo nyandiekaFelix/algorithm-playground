@@ -1,7 +1,11 @@
 function getCount(str) {
   let vowelsCount = 0;
-  const vowels = 'aeiou';
   
+  const vowels = ['a', 'e', 'i', 'o', 'u']; 
+   /* a string with the vowels might just work
+    * const vowels = 'aeiou';
+    */
+    
   // Iterate Over Given String
   for (let letter = 0; letter < str.length; letter++) {
 
@@ -13,3 +17,5 @@ function getCount(str) {
   
   return vowelsCount;
 }
+
+console.log(getCount('someString')); // 3
