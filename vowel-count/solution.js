@@ -10,7 +10,6 @@ function getCount(str) {
       vowelsCount++;
     }
   }
-  // enter your majic here
   
   return vowelsCount;
 }
