@@ -1,2 +1,1 @@
-# algorithm-playground
-algorithm practice problems
+# Algorithm Practice Repo

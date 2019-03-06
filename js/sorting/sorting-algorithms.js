@@ -1,16 +1,3 @@
-class Sorter {
-
-    constructor(input, strategy) {
-        this.input = input;
-        this.strategy = strategy;
-    }
-
-    sort() {
-        return this.strategy(this.input);
-    }
-
-}
-
 /**
  * Helper method to swap number indexes in an array
  * @param {Array} data          - Array with items
@@ -20,9 +7,9 @@ class Sorter {
  */
 
 function swap(data, first, second) {
-    let temp = data[first];
-    data[first] = data[second];
-    data[second] = temp;
+  let temp = data[first];
+  data[first] = data[second];
+  data[second] = temp;
 }
 
 
@@ -32,18 +19,18 @@ function swap(data, first, second) {
  * @return {Array}      - The sorted array
  */
 const bubbleSort = (data) => {
-    const arrLength = data.length;
+  const arrLength = data.length;
 
-    for (let index = 0; index < arrLength; index++) {
-        for (let current = 0; current < (arrLength - index-1); current++){
-            // Check if current index is greater than the next item in array 
-            if (data[current] > data[current + 1]){
-                swap(data, current, current + 1);
-            }
-        }
+  for (let index = 0; index < arrLength; index++) {
+    for (let current = 0; current < (arrLength - index-1); current++){
+      // Check if current index is greater than the next item in array
+      if (data[current] > data[current + 1]){
+          swap(data, current, current + 1);
+      }
     }
+  }
 
-    return console.log(`using bubble sort: `, data);
+  return console.log(`using bubble sort: `, data);
 };
 
 
@@ -53,50 +40,48 @@ const bubbleSort = (data) => {
  * @return {Array}      - The sorted array
  */
 const selectionSort = (data) => {
-    const arrLength = data.length;
+  const arrLength = data.length;
 
-    for (let index = 0; index < arrLength; index++) {
-        // set current index as the minimum number in array
-        let min = index;
+  for (let index = 0; index < arrLength; index++) {
+    // set current index as the minimum number in array
+    let min = index;
 
-        // find minimum in unsorted array
-        for (let current = index + 1; current < arrLength; current++){
-            // check if current item in array is smaller than minimum
-            if (data[current] < data[min]){
-                min = current;
-            }
-        }
-
-        if (index !== min) {
-            swap(data, index, min);
-        }
+    // find minimum in unsorted array
+    for (let current = index + 1; current < arrLength; current++){
+      // check if current item in array is smaller than minimum
+      if (data[current] < data[min]){
+          min = current;
+      }
     }
-    
-    return console.log('using selection sort: ', data);
+
+    if (index !== min) {
+      swap(data, index, min);
+    }
+  }
+
+  return console.log('using selection sort: ', data);
 };
 
 
 /**
  * Sort array using two different implementations of the
  * merge sort algorithm
- * 
+ *
  * @param {Array} data  - Array to be sorted
  * @return {Array}      - The sorted array
  */
 const mergeSort = (data) => {
 
-    const variations = {
-        
-        topDown: function(array) {
+  const variations = {
 
-        },
+    topDown: function(array) {
 
-        bottomUp: function(array) {
+    },
 
-        }
-    };
+    bottomUp: function(array) {
 
-    
+    }
+  };
 };
 
 
