@@ -30,7 +30,7 @@ const bubbleSort = (data) => {
     }
   }
 
-  return console.log(`using bubble sort: `, data);
+  return console.info(`Using bubble sort: `, data);
 };
 
 
@@ -72,16 +72,6 @@ const selectionSort = (data) => {
  */
 const mergeSort = (data) => {
 
-  const variations = {
-
-    topDown: function(array) {
-
-    },
-
-    bottomUp: function(array) {
-
-    }
-  };
 };
 
 
@@ -110,18 +100,7 @@ const quickSort = (data) => {};
 
 const testArray = [10, 12, 372, 25, 17, 100, 223, 7, 54, 402];
 
-const bubble = new Sorter(testArray, bubbleSort);
-const selection = new Sorter(testArray, selectionSort);
-/* const merge = new Sorter(testArray, mergeSort);
-const insertion = new Sorter(testArray, insertionSort);
-const shell = new Sorter(testArray, shellSort);
-const quick = new Sorter(testArray, quickSort); */
-
 console.log('test array: ', testArray);
 
-bubble.sort();
-selection.sort();
-/* merge.sort(testArray);
-insertion.sort(testArray);
-shell.sort(testArray);
-quick.sort(testArray); */
+bubbleSort();
+selectionSort();
