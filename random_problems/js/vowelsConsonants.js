@@ -5,16 +5,15 @@
  */
 
 function vowelsAndConsonants(str) {
-  const vowels = 'aeiou';
+  const vowels = [];
+  const consonants = [];
 
-  const isVowel = (str) =>
-    Array.from(str).filter(letter => vowels.includes(letter));
+  Array.from(str.toLowerCase()).forEach(letter => {
+    'aeiou'.includes(letter) ? vowels.push(letter) : consonants.push(letter);
+  });
 
-  const isConsonant = (str) =>
-    Array.from(str).filter(letter => !vowels.includes(letter));
-
-  console.info(isVowel(str));
-  console.info(isConsonant(str));
+  console.info(vowels);
+  console.info(consonants);
 }
 
-vowelsAndConsonants('javascriptloops');
+vowelsAndConsonants('vowelsandconsonants');
